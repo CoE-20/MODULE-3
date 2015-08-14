@@ -3,20 +3,74 @@
 <head>
     <title></title>
     <link rel="stylesheet" type="text/css" href="/static/style.css">
-    <script type="text/javascript" src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
-</head>
+    <script type="text/javascript" src='/static/jquery-1.11.3.min.js'></script>
+     <!-- <script type="text/javascript" src='https://code.jquery.com/jquery-2.1.4.min.js'></script> -->
+</head> 
 <body>
 <div class='main'>
-    <h1>Hello Module 3</h1>
+    <h1>NEW THESIS ENTRY</h1>
     <div class='form-section'>
-        <!-- your form here -->
+        <form id = "create-form">
+            <div>
+                <label class="control-label" for="year">Year:</label> 
+            </div>
+            <div class = "input">
+                <select name="year" id = "input" required>
+                    <option disabled selected>  </option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                </select>
+            </div>
+            <div>
+                <label for="title">Title:</label>
+            </div>
+            <div class = "input"> 
+                <input type="text" class="form-control" name = "Title" placeholder="Title" required>
+            </div>
+            <div>
+                <label class="control-label" for="abstract" >Abstract:</label>
+            </div>
+            <div class = "input"> 
+                <textarea name="abstract" rows="10" cols="30" placeholder = "Abstract" style="font-family: Arial, sans-serif;" required></textarea>
+            </div>
+            <div>
+                <label for="adviser">Adviser:</label>
+            </div>
+            <div class = "input"> 
+                <input type="text" class="form-control" name = "adviser" placeholder="Adviser" required>
+            </div>
+            <div>
+                <label class="control-label" for="section">Section:</label>
+            </div >
+            <div class = "input"> 
+                <select name="section" id = "input" required>
+                    <option disabled selected>  </option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class = "submit"> 
+                <input type="submit" value="Submit"></input>
+            </div>
+        </form>    
     </div>
+    <br>
+    <br>
+    <hr>
+    <h4>List</h4>
     <div class='list-section'>
-        <!-- your list here -->
+        <ul id = "thesis-list"> </ul>
     </div>
 </div>
 
 
 <script type="text/javascript" src='/static/script.js'></script>
+
 </body>
 </html>
